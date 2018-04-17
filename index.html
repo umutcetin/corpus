@@ -3,11 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <title>Corpus</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116364111-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116364111-2');
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark"> <a class="navbar-brand" href="#">Corpus</a>
+  <select class="form-control navbar-right" id="sl_user" onChange="userChanged()">
+    <option value="0">Select User</option>
+    <option value="1">Ali Minnet</option>
+    <option value="2">Alper Kaplan</option>
+    <option value="3">Alper Ulusoy</option>
+    <option value="4">Anıl Sayar</option>
+    <option value="5">Aydın Akaltan</option>
+    <option value="6">Çağrı Özkan</option>
+    <option value="7">Cavide Balkı Gemirter</option>
+    <option value="8">Cenk Çorapçı</option>
+    <option value="9">Deniz Tuana Ergönül</option>
+    <option value="10">Efe Andaç</option>
+    <option value="11">Emre Çiçek</option>
+    <option value="12">Esra İnce</option>
+    <option value="13">Haluk Ateş</option>
+    <option value="14">Murat Solmaz</option>
+    <option value="15">Naim Görkem Bölük</option>
+    <option value="16">Özgün Akalın</option>
+    <option value="17">Sercan Sarı</option>
+    <option value="18">Şeyda Ertarla</option>
+    <option value="19">Umut Çetin</option>
+    <option value="20">Yonca Üstünbaş Vargün</option>
+  </select>
+</nav>
+<div id="wrapper">
+  <div id="sidebar-wrapper">
+    <div class="container">
+      <label for="comment">Output:</label>
+      <button id="btn_delete_option" onClick="deleteOption()" title="Remove selected item">x</button>
+      <select multiple class="form-control" id="sl_sentence" >
+      </select>
+      <button id="btn_clipboard" onClick="copy()">Copy to Clipboard</button>
+      <!-- <label for="comment">Output:</label>
+      <textarea class="form-control" id="ta_output"></textarea>--> 
+    </div>
+  </div>
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="left" class="col-lg-12">
+          <ol id="ol_sentences">
+          </ol>
+        </div>
+      </div>
+      </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div>
 </body>
-<script type="text/javascript" src="parse.js"></script>
+<script type="text/javascript" src="parse2.js"></script>
 </html>
